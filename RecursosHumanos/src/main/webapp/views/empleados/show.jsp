@@ -13,5 +13,11 @@
 	<p>Edad: <c:out value="${empleado.edad}" /></p>
 	<p>Sueldo: <c:out value="${empleado.sueldo}" /></p>
 	
+	<form action="empleados" method="post">
+		<input type="hidden" name="id" value="${empleado.id}"/>
+		<input type="hidden" value="delete" name="accion"/>
+		<input type="submit" value="Eliminar empleado"/>
+	</form>
+	
 </body>
 </html>

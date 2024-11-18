@@ -10,7 +10,9 @@
 </head>
 <body>
 	<h1>Editar</h1>
-	<form action="" method="post">
+	
+	<form action="empleados" method="post">
+	<input type="hidden" value="update" name="accion"/>
 		<p>ID: <input value="${empleado.id}" name="id"/></p>
 		<p>Nombre: <input value="${empleado.nombre}" name="nombre"/></p>
 		<p>Edad: <input value="${empleado.edad}" name="edad"/></p>

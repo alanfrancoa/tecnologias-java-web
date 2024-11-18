@@ -10,7 +10,8 @@
 </head>
 <body>
 	<h1>Create</h1>
-	<form action="" method="post">
+	<form action="empleados" method="post">
+		<input type="hidden" value="insert" name="accion"/>
 		<p>Nombre: <input value="" name="nombre"/></p>
 		<p>Edad: <input value="" name="edad"/></p>
 		<p>Sueldo: <input value="" name="sueldo"/></p>
