@@ -1,6 +1,4 @@
-<%@page import="models.Empleado"%>
-<%@page import="repositories.interfaces.EmpleadoRepo"%>
-<%@page import="repositories.EmpleadosRepoSingleton"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,7 +9,7 @@
 <title>Crear</title>
 </head>
 <body>
-	<h1>Editar</h1>
+	<h1>Create</h1>
 	<form action="" method="post">
 		<p>Nombre: <input value="" name="nombre"/></p>
 		<p>Edad: <input value="" name="edad"/></p>

@@ -1,16 +1,8 @@
-<%@page import="models.Empleado"%>
-<%@page import="repositories.interfaces.EmpleadoRepo"%>
-<%@page import="repositories.EmpleadosRepoSingleton"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%
-EmpleadoRepo repo = EmpleadosRepoSingleton.getInstance();
 
-Empleado emple = repo.findById(3);
-
-request.setAttribute("empleado", emple);
-%>
 <html>
 <head>
 <meta charset="UTF-8">

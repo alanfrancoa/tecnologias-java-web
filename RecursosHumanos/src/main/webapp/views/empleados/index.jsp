@@ -1,16 +1,8 @@
-<%@page import="models.Empleado"%>
-<%@page import="java.util.List"%>
-<%@page import="repositories.interfaces.EmpleadoRepo"%>
-<%@page import="repositories.EmpleadosRepoSingleton"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%
-	EmpleadoRepo repo = EmpleadosRepoSingleton.getInstance();
-	List<Empleado> listaEmple = repo.getAll();
-	
-	request.setAttribute("listita", listaEmple);
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +10,8 @@
 <title>Empleados</title>
 </head>
 <body>
+
+	<a href="empleados?accion=create" >Agregue un empleado</a>
 	
 	<table border="1">
 		<thead>
@@ -37,8 +31,8 @@
 					<td> <c:out value="${empleado.nombre}"/> </td>
 					<td> <c:out value="${empleado.edad}"/> </td>
 					<td> <c:out value="${empleado.sueldo}"/> </td>
-					<td> <a href="#">Ver</a> </td>
-					<td> <a href="#">Editar</a> </td>
+					<td> <a href="empleados?accion=show&id=${empleado.id}">Ver</a> </td>
+					<td> <a href="empleados?accion=edit&id=${empleado.id}">Editar</a> </td>
 				</tr>
 			</c:forEach>
 		</tbody>
